@@ -72,7 +72,7 @@ Aaron/customers have used it.
    lifecycle, ~15 tools), or push for closer community parity now? Recommend Tier 1+2 —
    read-only-only feels incomplete for a first-party server people will actually adopt,
    but Tier 3 is genuinely deferrable.
-2. **Companion SDK**: build `@wyre-technology/node-snipe-it` now (fleet convention) or
+2. **Companion SDK**: build `@wyre-ai/node-snipe-it` now (fleet convention) or
    inline the API client in this repo for v1 speed and split later? Recommend following
    convention from the start — inlining then splitting is real rework the fleet has hit
    before (multiple `node-*` extraction follow-ups in the backlog).
