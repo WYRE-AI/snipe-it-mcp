@@ -45,7 +45,7 @@ Full per-tool breakdown, Snipe-IT REST endpoint mapping, and response-field note
 
 ## Companion SDK
 
-Fleet convention wraps vendor API calls in a separate `@wyre-technology/node-snipe-it`
+Fleet convention wraps vendor API calls in a separate `@wyre-ai/node-snipe-it`
 package (see `node-connectwise-cpq`, `node-scalepad`, etc. for the pattern) rather than
 inline in this repo. **Not built yet** — scoping that is the next step after this
 proposal is confirmed, so the SDK's shape matches whichever tier boundary Aaron picks.

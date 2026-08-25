@@ -1,5 +1,5 @@
 {
-  "name": "@wyre-technology/snipe-it-mcp",
+  "name": "@wyre-ai/snipe-it-mcp",
   "version": "0.0.0-semantically-released",
   "description": "Snipe-IT (open-source IT asset management) MCP server for Claude — DRAFT, scope stage",
   "type": "module",
@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wyre-technology/snipe-it-mcp.git"
+    "url": "git+https://github.com/WYRE-AI/snipe-it-mcp.git"
   },
   "author": "WYRE Technology",
   "license": "Apache-2.0",
