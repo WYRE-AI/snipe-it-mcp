@@ -1,0 +1,43 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.WYRE-AI/snipe-it-mcp",
+  "title": "Snipe-IT",
+  "description": "Snipe-IT MCP server draft manifest. No working implementation or deployable image is available yet.",
+  "repository": {
+    "url": "https://github.com/WYRE-AI/snipe-it-mcp",
+    "source": "github"
+  },
+  "version": "0.0.0",
+  "websiteUrl": "https://github.com/WYRE-AI/snipe-it-mcp",
+  "packages": [
+    {
+      "registryType": "oci",
+      "identifier": "ghcr.io/wyre-ai/snipe-it-mcp:0.0.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "SNIPEIT_URL",
+          "description": "Snipe-IT instance base URL (self-hosted instance, https recommended)",
+          "isRequired": true,
+          "format": "string"
+        },
+        {
+          "name": "SNIPEIT_TOKEN",
+          "description": "Snipe-IT personal or API access token (Bearer auth)",
+          "isRequired": true,
+          "isSecret": true,
+          "format": "string"
+        },
+        {
+          "name": "MCP_TRANSPORT",
+          "description": "Transport mode for the server. Set to stdio for local CLI use; image defaults to http for gateway hosting when implemented.",
+          "isRequired": false,
+          "default": "stdio",
+          "format": "string"
+        }
+      ]
+    }
+  ]
+}
