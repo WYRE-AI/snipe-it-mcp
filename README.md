@@ -57,3 +57,7 @@ first, don't go deep before review" instruction. Not registered in Conduit's
 `vendor-config.ts`, no GHCR image, no release pipeline. Repo is **private** pending
 Aaron's scope sign-off (fleet convention for `*-mcp` repos is public; flip once approved
 rather than defaulting to public pre-review).
+
+## Security
+
+Dependencies are locked in `package-lock.json` (install with `npm ci`). The MCP SDK floor is `@modelcontextprotocol/server` / `client` 2.3.1 and `node` 2.1.1, which carry the fixes for CVE-2026-111770 (GHSA-jm63-cq47-j5jp), CVE-2026-111768 (GHSA-46jr-4wx8-v453) and GHSA-f897-62hf-6gxq. When the HTTP server is added, follow the fleet request limits: a new server per request via `createMcpHandler(factory, { legacy: "stateless", maxRequestBodySize: 256 * 1024 })` and a 10,000-element cap on tool arguments (WYREAI-454).
